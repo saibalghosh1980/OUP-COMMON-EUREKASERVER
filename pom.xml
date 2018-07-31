@@ -27,7 +27,7 @@
 		<!-- ADD THESE LINES AS THEY WLL BE REQUIRED FOR CI-CD PROCESS -->
 		<build-profile>dev</build-profile>
 		<docker-host>http://localhost:2375</docker-host>
-		<docker-image-name>oupeurekaservicereg</docker-image-name>
+		<docker-image-name>oupeureka</docker-image-name>
 		<!-- ADD THESE LINES AS THEY WLL BE REQUIRED FOR CI-CD PROCESS -->
 	</properties>
 
