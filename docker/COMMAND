@@ -1,1 +1,1 @@
-docker run --network=oup-docker-network -i -d -t -p 8761:8761 --name oupeureka oupeurekaservicereg:latest
+docker run --restart=always --network=oup-docker-network-dev -i -d -t -p 8761:8761 --name dev-oupeureka oupeurekaservicereg:latest
