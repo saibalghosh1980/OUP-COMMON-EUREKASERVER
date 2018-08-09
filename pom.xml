@@ -77,14 +77,19 @@
 							<name>${docker-image-name}</name>
 							<alias>${build-profile}-${docker-image-name}</alias>
 							<build>
-								<from>openjdk:8-jdk-alpine</from>
+								<from>gboxfjnkprd01.uk.oup.com:9443/springboot/ibmspringboot</from>
 								<!-- This is the same ENTRYPOINT used in a Dockerfile -->
 								<entryPoint>
 									<exec>
-										<arg>java</arg>
+										<arg>java</arg>										
 										<arg>-Xms512m</arg>
-										<arg>-Xmx2g</arg>
-										<arg>-jar</arg>
+										<arg>-Xmx1g</arg>
+										<arg>-Xscmx2g</arg>
+										<arg>-Xshareclasses:name=SharedCacheForOUP</arg>
+										<arg>-Xtune:virtualized</arg>
+										<arg>-XX:+IdleTuningGcOnIdle</arg>
+										<arg>-Dloader.path=/saplibs/</arg>
+										<arg>-jar</arg>	
 										<arg>/maven/${project.build.finalName}.jar</arg>
 									</exec>
 								</entryPoint>
